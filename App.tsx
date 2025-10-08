@@ -15,24 +15,13 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
-        <Text style={styles.Title}>My Portfolio App</Text>
+        <Text style={styles.title}>My Portfolio App</Text>
         <View style={styles.menuContainer}>
           <Pressable
-            style={styles.buttonruta}
+            style={styles.urlButton}
             onPress={() => setDisplayMyQR(true)}
           >
-            <Text
-              style={{
-                ...{
-                  color: "white",
-                  fontWeight: "bold",
-                  textTransform: "uppercase",
-                },
-                ...styles.shadoxboxing,
-              }}
-            >
-              Mi info
-            </Text>
+            <Text style={styles.titleInfoButton}>Mi info</Text>
           </Pressable>
           <Button
             onPress={() => setDisplayMyQR(false)}
@@ -134,7 +123,7 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     width: "100%",
   },
-  Title: {
+  title: {
     backgroundColor: "gray",
     textAlign: "center",
     fontWeight: "bold",
@@ -147,7 +136,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  buttonruta: {
+  urlButton: {
     width: "50%",
   },
   bodyStyles: {
@@ -182,15 +171,13 @@ const styles = StyleSheet.create({
     height: "100%",
     alignItems: "center",
   },
-  shadoxboxing: {
+  titleInfoButton: {
     shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 7,
-    },
+    color: "white",
+    fontWeight: "bold",
+    textTransform: "uppercase",
     shadowOpacity: 0.43,
     shadowRadius: 9.51,
-
     elevation: 15,
   },
 });
