@@ -8,7 +8,7 @@ import {
   View,
   Image,
 } from "react-native";
-import QRCode from "react-native-qrcode-svg";
+import QrImage from "./components/QrImage";
 
 export default function App() {
   const [displayMyQR, setDisplayMyQR] = useState(true);
@@ -116,11 +116,7 @@ export default function App() {
           </View>
         </View>
       ) : (
-        <View style={styles.bodyStyles}>
-          <View style={styles.CentrarcodigoQR}>
-            <QRCode value="https://github.com/adhernea" />
-          </View>
-        </View>
+        <QrImage />
       )}
     </View>
   );
