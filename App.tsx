@@ -15,8 +15,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
-        <Text style={styles.firstTopRowContainer}>My Portfolio App</Text>
-        <View style={styles.rowTopSecondContainer}>
+        <Text style={styles.Title}>My Portfolio App</Text>
+        <View style={styles.menuContainer}>
           <Pressable
             style={styles.buttonruta}
             onPress={() => setDisplayMyQR(true)}
@@ -134,14 +134,14 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     width: "100%",
   },
-  firstTopRowContainer: {
+  Title: {
     backgroundColor: "gray",
     textAlign: "center",
     fontWeight: "bold",
     textAlignVertical: "center",
     fontSize: 30,
   },
-  rowTopSecondContainer: {
+  menuContainer: {
     flexDirection: "row",
     backgroundColor: "darkgray",
     justifyContent: "center",
