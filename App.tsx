@@ -26,8 +26,7 @@ export default function App() {
           <Button
             onPress={() => setDisplayMyQR(false)}
             title="Mi Repo"
-            color="light-gray"
-            accessibilityLabel="Un botón pal QR"
+            accessibilityLabel="Un boton para el QR"
           />
         </View>
       </View>
