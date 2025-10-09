@@ -2,8 +2,11 @@ import { useState } from "react";
 import React from "react";
 import { Button, Pressable, StyleSheet, Text, View } from "react-native";
 
-const Header = () => {
-  const [displayMyQR, setDisplayMyQR] = useState(true);
+interface HeaderProps {
+  setDisplayMyQR: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Header = ({ setDisplayMyQR }: HeaderProps) => {
   return (
     <View style={styles.topContainer}>
       <Text style={styles.title}>My Portfolio App</Text>
