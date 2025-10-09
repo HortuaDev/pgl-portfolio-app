@@ -45,7 +45,7 @@ const PrincipalContent = () => {
         <Text style={styles.likesText}>cosas que me gustan mucho:</Text>
         <ScrollView style={styles.ScrollViewStyle}>
           {cosasQmeGustan.map((element) => (
-            <Text style={styles.cosasQmeGustanMuxoEstails}>{element}</Text>
+            <Text style={styles.contentItem}>{element}</Text>
           ))}
         </ScrollView>
       </View>
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     width: 90,
     borderRadius: 100,
   },
-  cosasQmeGustanMuxoEstails: {
+  contentItem: {
     borderColor: "black",
     borderWidth: 1,
     borderStyle: "dashed",
