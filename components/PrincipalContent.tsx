@@ -1,14 +1,5 @@
 import React from "react";
-import { useState } from "react";
-import {
-  Button,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-} from "react-native";
+import { ScrollView, StyleSheet, Text, View, Image } from "react-native";
 
 const PrincipalContent = () => {
   const cosasQmeGustan = [

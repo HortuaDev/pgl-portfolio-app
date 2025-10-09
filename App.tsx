@@ -1,13 +1,5 @@
 import { useState } from "react";
-import {
-  Button,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-} from "react-native";
+import { StyleSheet, View } from "react-native";
 import QrImage from "./components/QrImage";
 import PrincipalContent from "./components/PrincipalContent";
 import Header from "./components/Header";

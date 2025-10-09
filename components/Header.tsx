@@ -1,4 +1,3 @@
-import { useState } from "react";
 import React from "react";
 import { Button, Pressable, StyleSheet, Text, View } from "react-native";
 
