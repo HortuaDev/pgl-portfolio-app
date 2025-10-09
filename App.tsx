@@ -1,24 +1,26 @@
 import { useState } from "react";
-import { StyleSheet, View } from "react-native";
-import QrImage from "./components/QrImage";
-import PrincipalContent from "./components/PrincipalContent";
-import Header from "./components/Header";
+import { View } from "react-native";
+import { QrImage } from "./components/index";
+import { PrincipalContent } from "./components/index";
+import { Header } from "./components/index";
+import styles from "./styles/globalStyles";
 
 export default function App() {
   const [displayMyQR, setDisplayMyQR] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
   return (
     <View style={styles.container}>
-      <Header setDisplayMyQR={setDisplayMyQR} />
-      {displayMyQR ? <PrincipalContent /> : <QrImage />}
+      <Header
+        setDisplayMyQR={setDisplayMyQR}
+        setIsDarkMode={setIsDarkMode}
+        isDarkMode={isDarkMode}
+      />
+      {displayMyQR ? (
+        <PrincipalContent isDarkMode={isDarkMode} />
+      ) : (
+        <QrImage isDarkMode={isDarkMode} />
+      )}
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
