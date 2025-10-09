@@ -10,7 +10,7 @@ export default function App() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   return (
-    <View style={styles.container}>
+    <View style={isDarkMode ? styles.containerDark : styles.containerWhite}>
       <Header
         setDisplayMyQR={setDisplayMyQR}
         setIsDarkMode={setIsDarkMode}

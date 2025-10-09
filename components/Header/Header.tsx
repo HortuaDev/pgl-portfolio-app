@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, Image, Pressable, StyleSheet, Text, View } from "react-native";
-import styles from "./HeaderStyles";
+import { Button, Image, Pressable, Text, View } from "react-native";
+import styles from "../../styles/HeaderStyles";
 
 interface HeaderProps {
   setDisplayMyQR: React.Dispatch<React.SetStateAction<boolean>>;
@@ -10,28 +10,52 @@ interface HeaderProps {
 
 const Header = ({ setDisplayMyQR, setIsDarkMode, isDarkMode }: HeaderProps) => {
   const ICON_MOON = require("../../assets/icon_moon.png");
-  const ICON_SUN = require("../../assets/icon_sun.png");
+  const ICON_SUN = require("../../assets/icon_sun_white.png");
 
   return (
-    <View style={styles.topContainerWhite}>
-      <View style={styles.headerContainerTopWhite}>
-        <Text style={styles.title}>My Portfolio App</Text>
+    <View
+      style={isDarkMode ? styles.topContainerDark : styles.topContainerWhite}
+    >
+      <View
+        style={
+          isDarkMode
+            ? styles.headerContainerTopDark
+            : styles.headerContainerTopWhite
+        }
+      >
+        <Text style={isDarkMode ? styles.titleDark : styles.titleWhite}>
+          My Portfolio App
+        </Text>
         <Pressable
           onPress={() => (setDisplayMyQR(true), setIsDarkMode(!isDarkMode))}
         >
           <Image
             source={isDarkMode ? ICON_SUN : ICON_MOON}
-            style={styles.isDarkButtonWhite}
+            style={
+              isDarkMode ? styles.isDarkButtonDark : styles.isDarkButtonWhite
+            }
           ></Image>
         </Pressable>
       </View>
 
-      <View style={styles.menuContainerWhite}>
+      <View
+        style={
+          isDarkMode ? styles.menuContainerDark : styles.menuContainerWhite
+        }
+      >
         <Pressable
-          style={styles.infoButtonWhite}
+          style={isDarkMode ? styles.infoButtonDark : styles.infoButtonWhite}
           onPress={() => setDisplayMyQR(true)}
         >
-          <Text style={styles.titleInfoButtonWhite}>Mi info</Text>
+          <Text
+            style={
+              isDarkMode
+                ? styles.titleInfoButtonDark
+                : styles.titleInfoButtonWhite
+            }
+          >
+            Mi info
+          </Text>
         </Pressable>
         <Button
           onPress={() => setDisplayMyQR(false)}
